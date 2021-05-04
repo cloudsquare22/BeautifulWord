@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct SettingView: View {
+    @EnvironmentObject var settingData:SettingData
+
     var body: some View {
         List {
             Section(header: Text("OPERATION")) {
@@ -24,6 +26,9 @@ struct SettingView: View {
                 SettingAboutView()
             }
         }
+//        .onDisappear() {
+//            self.settingData.saveData()
+//        }
     }
 }
 

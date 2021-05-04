@@ -53,6 +53,7 @@ final class SettingData: ObservableObject  {
     }
     
     func saveData() {
+        print(#function)
         UserDefaults.standard.set(fontNames[selectFontIndex], forKey: "fontName")
         UserDefaults.standard.set(selectFontSize, forKey: "fontSize")
         UserDefaults.standard.set(autolock, forKey: "autolock")
