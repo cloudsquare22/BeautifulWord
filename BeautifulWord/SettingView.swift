@@ -26,9 +26,6 @@ struct SettingView: View {
                 SettingAboutView()
             }
         }
-//        .onDisappear() {
-//            self.settingData.saveData()
-//        }
     }
 }
 

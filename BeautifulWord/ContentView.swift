@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var musicData: MusicData
     @EnvironmentObject var settingData: SettingData
+    @State var onSettingView = false
 
     var body: some View {
         NavigationView {
@@ -20,12 +21,21 @@ struct ContentView: View {
                         .frame(width: geometry.size.width, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
                 .navigationBarTitle(Text(musicData.title), displayMode: .inline)
-                .navigationBarItems(trailing: NavigationLink(destination: SettingView(), label: {Image("setting")}))
+                .navigationBarItems(trailing: Button(action: {
+                    self.onSettingView.toggle()
+                }, label: {
+                    Image(systemName: "gearshape")
+                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/))
                 .onTapGesture(count: 2, perform: {
                     self.musicData.previous()
                 })
                 .onTapGesture(perform: {
                     self.musicData.next()
+                })
+                .sheet(isPresented: self.$onSettingView, onDismiss: {
+                    self.settingData.saveData()
+                }, content: {
+                    SettingView()
                 })
             }
         }
