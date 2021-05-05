@@ -20,24 +20,24 @@ struct ContentView: View {
                     Text(musicData.lyrics).padding().font(Font.custom(settingData.fontNames[settingData.selectFontIndex], size: CGFloat(settingData.selectFontSize)))
                         .frame(width: geometry.size.width, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
-                .navigationBarTitle(Text(musicData.title), displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.onSettingView.toggle()
-                }, label: {
-                    Image(systemName: "gearshape")
-                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/))
                 .onTapGesture(count: 2, perform: {
                     self.musicData.previous()
                 })
                 .onTapGesture(perform: {
                     self.musicData.next()
                 })
-                .sheet(isPresented: self.$onSettingView, onDismiss: {
-                    self.settingData.saveData()
-                }, content: {
-                    SettingView()
-                })
             }
+            .navigationBarTitle(Text(musicData.title), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                self.onSettingView.toggle()
+            }, label: {
+                Image(systemName: "gearshape")
+            }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/))
+            .sheet(isPresented: self.$onSettingView, onDismiss: {
+                self.settingData.saveData()
+            }, content: {
+                SettingView()
+            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
