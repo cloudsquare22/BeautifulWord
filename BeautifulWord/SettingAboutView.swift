@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct SettingAboutView: View {
+    let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
-            Text("Ver 2.0")
-            Text("Copyright (c) 2020 cloudsquare.jp. All rights reserved.")
+            Text("Ver \(version)")
+            Text("Copyright (c) 2020-2021 cloudsquare.jp. All rights reserved.")
                 .font(.caption)
         }
     }

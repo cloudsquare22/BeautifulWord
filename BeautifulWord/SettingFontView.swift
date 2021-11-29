@@ -19,7 +19,10 @@ struct SettingFontView: View {
                 ForEach(0 ..< settingData.fontNames.count) {
                     Text(self.settingData.fontNames[$0])
                 }
-                }.padding().labelsHidden()
+            }
+            .pickerStyle(WheelPickerStyle())
+            .padding()
+            .labelsHidden()
             HStack {
                 Slider(value: $settingData.selectFontSize, in: 8...32, step: 1.0)
                 Text("\(Int(settingData.selectFontSize))")
