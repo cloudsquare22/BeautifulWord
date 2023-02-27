@@ -16,7 +16,7 @@ struct SettingFontView: View {
         VStack {
             Text(musicData.title).padding().font(Font.custom(settingData.fontNames[settingData.selectFontIndex], size: CGFloat(settingData.selectFontSize)))
             Picker(selection: $settingData.selectFontIndex, label: Text("")) {
-                ForEach(0 ..< settingData.fontNames.count) {
+                ForEach(0 ..< settingData.fontNames.count, id: \.self) {
                     Text(self.settingData.fontNames[$0])
                 }
             }
