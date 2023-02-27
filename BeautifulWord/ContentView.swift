@@ -17,7 +17,10 @@ struct ContentView: View {
         NavigationView {
             GeometryReader { geometry in
                 ScrollView {
-                    Text(musicData.lyrics).padding().font(Font.custom(settingData.fontNames[settingData.selectFontIndex], size: CGFloat(settingData.selectFontSize)))
+                    Text(musicData.lyrics)
+                        .padding()
+                        .font(Font.custom(settingData.fontNames[settingData.selectFontIndex], size: CGFloat(settingData.selectFontSize)))
+                        .lineSpacing(4.0)
                         .frame(width: geometry.size.width, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
                 .onTapGesture(count: 2, perform: {
