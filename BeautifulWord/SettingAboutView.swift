@@ -14,7 +14,7 @@ struct SettingAboutView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
             Text("Ver \(version)")
-            Text("Copyright (c) 2020-2021 cloudsquare.jp. All rights reserved.")
+            Text("Copyright (c) 2020-2023 cloudsquare.jp. All rights reserved.")
                 .font(.caption)
         }
     }

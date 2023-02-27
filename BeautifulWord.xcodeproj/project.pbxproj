@@ -321,11 +321,12 @@
 				DEVELOPMENT_TEAM = 385NJ9XLA7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BeautifulWord/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cloudsquare.ios.BeautifulWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -345,11 +346,12 @@
 				DEVELOPMENT_TEAM = 385NJ9XLA7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BeautifulWord/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cloudsquare.ios.BeautifulWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

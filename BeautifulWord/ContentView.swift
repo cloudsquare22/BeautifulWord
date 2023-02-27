@@ -18,6 +18,7 @@ struct ContentView: View {
             GeometryReader { geometry in
                 ScrollView {
                     Text(musicData.lyrics)
+                        .multilineTextAlignment(.leading)
                         .padding()
                         .font(Font.custom(settingData.fontNames[settingData.selectFontIndex], size: CGFloat(settingData.selectFontSize)))
                         .lineSpacing(8.0)
