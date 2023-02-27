@@ -13,9 +13,8 @@
 		8D385A45234F5ECD003459C1 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D385A44234F5ECC003459C1 /* SettingData.swift */; };
 		8D510EB9234626CA00C06CD3 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510EB8234626C900C06CD3 /* MusicData.swift */; };
 		8D510EBB23486B9800C06CD3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510EBA23486B9800C06CD3 /* SettingView.swift */; };
+		8D642F6C29ACD4FD00C4F659 /* BeautifulWordSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D642F6B29ACD4FD00C4F659 /* BeautifulWordSwiftUIApp.swift */; };
 		8D72D1E9235DE67B00434466 /* SettingAutoLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72D1E8235DE67B00434466 /* SettingAutoLockView.swift */; };
-		8D8810FE233F8831001CCA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8810FD233F8831001CCA3F /* AppDelegate.swift */; };
-		8D881100233F8831001CCA3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8810FF233F8831001CCA3F /* SceneDelegate.swift */; };
 		8D881102233F8831001CCA3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D881101233F8831001CCA3F /* ContentView.swift */; };
 		8D881104233F8833001CCA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D881103233F8833001CCA3F /* Assets.xcassets */; };
 		8D881107233F8833001CCA3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D881106233F8833001CCA3F /* Preview Assets.xcassets */; };
@@ -29,10 +28,9 @@
 		8D385A44234F5ECC003459C1 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 		8D510EB8234626C900C06CD3 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
 		8D510EBA23486B9800C06CD3 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		8D642F6B29ACD4FD00C4F659 /* BeautifulWordSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulWordSwiftUIApp.swift; sourceTree = "<group>"; };
 		8D72D1E8235DE67B00434466 /* SettingAutoLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAutoLockView.swift; sourceTree = "<group>"; };
 		8D8810FA233F8831001CCA3F /* BeautifulWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D8810FD233F8831001CCA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D8810FF233F8831001CCA3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D881101233F8831001CCA3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8D881103233F8833001CCA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D881106233F8833001CCA3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -70,8 +68,6 @@
 		8D8810FC233F8831001CCA3F /* BeautifulWord */ = {
 			isa = PBXGroup;
 			children = (
-				8D8810FD233F8831001CCA3F /* AppDelegate.swift */,
-				8D8810FF233F8831001CCA3F /* SceneDelegate.swift */,
 				8D881101233F8831001CCA3F /* ContentView.swift */,
 				8D881103233F8833001CCA3F /* Assets.xcassets */,
 				8D881108233F8833001CCA3F /* LaunchScreen.storyboard */,
@@ -84,6 +80,7 @@
 				8D385A42234E158E003459C1 /* SettingFontView.swift */,
 				8D385A44234F5ECC003459C1 /* SettingData.swift */,
 				8D72D1E8235DE67B00434466 /* SettingAutoLockView.swift */,
+				8D642F6B29ACD4FD00C4F659 /* BeautifulWordSwiftUIApp.swift */,
 			);
 			path = BeautifulWord;
 			sourceTree = "<group>";
@@ -168,14 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D385A43234E158E003459C1 /* SettingFontView.swift in Sources */,
-				8D8810FE233F8831001CCA3F /* AppDelegate.swift in Sources */,
 				8D385A41234E120E003459C1 /* SettingAboutView.swift in Sources */,
 				8D510EBB23486B9800C06CD3 /* SettingView.swift in Sources */,
 				8D385A45234F5ECD003459C1 /* SettingData.swift in Sources */,
 				8D510EB9234626CA00C06CD3 /* MusicData.swift in Sources */,
 				8D385A3F234E103A003459C1 /* SettingOperationView.swift in Sources */,
-				8D881100233F8831001CCA3F /* SceneDelegate.swift in Sources */,
 				8D72D1E9235DE67B00434466 /* SettingAutoLockView.swift in Sources */,
+				8D642F6C29ACD4FD00C4F659 /* BeautifulWordSwiftUIApp.swift in Sources */,
 				8D881102233F8831001CCA3F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +318,7 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BeautifulWord/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +344,7 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BeautifulWord/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
