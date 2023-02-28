@@ -10,8 +10,16 @@ import SwiftUI
 
 struct SettingView: View {
     @EnvironmentObject var settingData:SettingData
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
+        Button(action: {
+            dismiss()
+        },
+               label: {
+            Image(systemName: "xmark.circle")
+        })
+        .font(.largeTitle)
         List {
             Section(header: Text("OPERATION")) {
                 SettingOperationView()

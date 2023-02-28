@@ -36,8 +36,8 @@ struct ContentView: View {
                 self.onSettingView.toggle()
             }, label: {
                 Image(systemName: "gearshape")
-            }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/))
-            .sheet(isPresented: self.$onSettingView, onDismiss: {
+            }).font(.title3))
+            .fullScreenCover(isPresented: self.$onSettingView, onDismiss: {
                 self.settingData.saveData()
             }, content: {
                 SettingView()
