@@ -20,7 +20,7 @@ struct SettingFontView: View {
                     Text(self.settingData.fontNames[$0])
                 }
             }
-            .pickerStyle(WheelPickerStyle())
+            .pickerStyle(.wheel)
             .padding()
             .labelsHidden()
             HStack {
