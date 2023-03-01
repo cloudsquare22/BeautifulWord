@@ -17,10 +17,10 @@ struct ContentView: View {
         NavigationView {
             GeometryReader { geometry in
                 ScrollView {
-                    Text(musicData.lyrics)
+                    Text(self.musicData.lyrics)
                         .multilineTextAlignment(.leading)
                         .padding()
-                        .font(Font.custom(settingData.fontNames[settingData.selectFontIndex], size: CGFloat(settingData.selectFontSize)))
+                        .font(Font.custom(self.settingData .selctFontName, size: CGFloat(settingData.selectFontSize)))
                         .lineSpacing(8.0)
                         .frame(width: geometry.size.width, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
@@ -31,7 +31,7 @@ struct ContentView: View {
                     self.musicData.next()
                 })
             }
-            .navigationBarTitle(Text(musicData.title), displayMode: .inline)
+            .navigationBarTitle(Text(self.musicData.title), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 self.onSettingView.toggle()
             }, label: {

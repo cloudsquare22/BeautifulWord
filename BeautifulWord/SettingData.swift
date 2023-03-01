@@ -10,8 +10,8 @@ import Foundation
 import SwiftUI
 
 final class SettingData: ObservableObject  {
-    @Published var fontNames:[String] = []
-    @Published var selectFontSize:Double = 14.0
+    @Published var fontNames: [String] = []
+    @Published var selectFontSize: Double = 14.0
     @Published var selectFontIndex = 0
     @Published var autolock = true {
         willSet {
@@ -19,7 +19,7 @@ final class SettingData: ObservableObject  {
         }
     }
     
-    var selctFontName:String {
+    var selctFontName: String {
         get {
             return fontNames[selectFontIndex]
         }
@@ -63,5 +63,5 @@ final class SettingData: ObservableObject  {
         print(lock)
         UIApplication.shared.isIdleTimerDisabled = !lock
     }
-
+    
 }
