@@ -12,10 +12,13 @@ struct SettingAboutView: View {
     let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0.0) {
-            Text("Ver \(version)")
-            Text("Copyright (c) 2020-2023 cloudsquare.jp. All rights reserved.")
-                .font(.caption)
+        VStack(alignment: .leading, spacing: 4.0) {
+            Text("Beautiful Word Version \(version)")
+            HStack {
+                Image("cloudsquare")
+                Text("©️ 2020-2023 cloudsquare.jp. All rights reserved.")
+                    .font(.caption)
+            }
         }
     }
 }
