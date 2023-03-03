@@ -15,11 +15,16 @@ struct SettingView: View {
     var body: some View {
         Button(action: {
             dismiss()
-        },
-               label: {
-            Image(systemName: "xmark.circle")
+        }, label: {
+            Image(systemName: "xmark")
+                .font(.largeTitle)
+                .padding(EdgeInsets(top: 16.0, leading: 16.0, bottom: 16.0, trailing: 16.0))
         })
-        .font(.largeTitle)
+        .overlay(
+            RoundedRectangle(cornerRadius: 64)
+                .stroke(.blue, lineWidth: 1)
+        )
+        .padding(.top, 32.0)
         List {
             Section(header: Text("OPERATION")) {
                 SettingOperationView()
