@@ -18,7 +18,7 @@ struct SettingView: View {
         }, label: {
             Image(systemName: "xmark")
                 .font(.largeTitle)
-                .padding(EdgeInsets(top: 16.0, leading: 16.0, bottom: 16.0, trailing: 16.0))
+                .padding(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
         })
         .overlay(
             RoundedRectangle(cornerRadius: 64)
