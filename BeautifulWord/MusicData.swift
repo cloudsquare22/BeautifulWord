@@ -8,12 +8,14 @@
 
 import SwiftUI
 import MediaPlayer
+import MusicKit
 
 final class MusicData: ObservableObject  {
     @Published var lyrics:String = ""
     @Published var title:String = ""
 
     var player: MPMusicPlayerController! = MPMusicPlayerController.systemMusicPlayer
+    let musicPlayer = SystemMusicPlayer.shared
 
     init() {
         let notificationCenter = NotificationCenter.default
@@ -23,12 +25,28 @@ final class MusicData: ObservableObject  {
     }
     
     func next() {
-        player.skipToNextItem()
+//        player.skipToNextItem()
+        Task {
+            do {
+                try await self.musicPlayer.skipToNextEntry()
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
         getLyrics()
     }
     
     func previous() {
         player.skipToPreviousItem()
+        Task {
+            do {
+                try await self.musicPlayer.skipToPreviousEntry()
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
         getLyrics()
     }
 
@@ -63,11 +81,13 @@ final class MusicData: ObservableObject  {
             }
             if let nowLyrics = now.lyrics {
                 lyrics = nowLyrics
+                print("player.nowPlayingItem.lyrics")
             }
             else if let assetURL = now.assetURL {
                 let aVAsset = AVAsset.init(url: assetURL)
                 if let nowLyrics = aVAsset.lyrics {
                     lyrics = nowLyrics
+                    print("AVAsset.init.lyrics:\(assetURL)")
                 }
             }
         }
