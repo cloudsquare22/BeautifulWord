@@ -31,12 +31,16 @@ struct ContentView: View {
                     self.musicData.next()
                 })
             }
-            .navigationBarTitle(Text(self.musicData.title), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                self.onSettingView.toggle()
-            }, label: {
-                Image(systemName: "gearshape")
-            }).font(.title3))
+            .navigationTitle(Text(self.musicData.title))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                Button(action: {
+                    self.onSettingView.toggle()
+                }, label: {
+                    Image(systemName: "gearshape")
+                })
+                .font(.title3)
+            })
             .fullScreenCover(isPresented: self.$onSettingView, onDismiss: {
                 self.settingData.saveData()
             }, content: {
